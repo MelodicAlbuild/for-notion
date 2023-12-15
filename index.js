@@ -1,10 +1,11 @@
 const { Client } = require("@notionhq/client");
+const { notion_token } = require("./config.json");
 
 const notion = new Client({
-  auth: "",
+  auth: notion_token,
 });
 
-const databaseId = "";
+const databaseId = "ad32d59f0b5146c9bf36032b5eee91fb";
 const date = new Date();
 const isoString = date.toISOString();
 const response = await notion.pages.create({
